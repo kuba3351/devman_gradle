@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/devman_backend_gradle/devman_backend_gradle.iml" filepath="$PROJECT_DIR$/.idea/modules/devman_backend_gradle/devman_backend_gradle.iml" group="devman_backend_gradle" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/devman_backend_gradle/devman_backend_gradle_main.iml" filepath="$PROJECT_DIR$/.idea/modules/devman_backend_gradle/devman_backend_gradle_main.iml" group="devman_backend_gradle" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/devman_backend_gradle/devman_backend_gradle_test.iml" filepath="$PROJECT_DIR$/.idea/modules/devman_backend_gradle/devman_backend_gradle_test.iml" group="devman_backend_gradle" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/devman_frontend_gradle/devman_frontend_gradle.iml" filepath="$PROJECT_DIR$/.idea/modules/devman_frontend_gradle/devman_frontend_gradle.iml" group="devman_frontend_gradle" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/devman_frontend_gradle/devman_frontend_gradle_main.iml" filepath="$PROJECT_DIR$/.idea/modules/devman_frontend_gradle/devman_frontend_gradle_main.iml" group="devman_frontend_gradle" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/devman_frontend_gradle/devman_frontend_gradle_test.iml" filepath="$PROJECT_DIR$/.idea/modules/devman_frontend_gradle/devman_frontend_gradle_test.iml" group="devman_frontend_gradle" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/devman_gradle.iml" filepath="$PROJECT_DIR$/.idea/modules/devman_gradle.iml" />
+    </modules>
+  </component>
+</project>

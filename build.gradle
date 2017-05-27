@@ -18,3 +18,7 @@ task mergedJavadoc(type: Javadoc, description: 'Creates Javadoc from all the pro
         subprojects*.configurations*.compile*.copyRecursive({ !(it instanceof ProjectDependency); })*.resolve()
     }
 }
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.5'
+}

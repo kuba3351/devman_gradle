@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: javax.el:el-api:2.2.1-b04">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.el/el-api/2.2.1-b04/907e6b1a1c2c18661eea4aa5c11db175455d36e9/el-api-2.2.1-b04.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.el/el-api/2.2.1-b04/c2c3a12ebd115d31e66a7b7b9c54095ba6b29573/el-api-2.2.1-b04-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -6,6 +6,7 @@ import com.mycompany.devman.controllers.ManagerRegisterController;
 import com.mycompany.devman.domain.MailConfig;
 import com.mycompany.devman.repositories.MailConfigRepository;
 import com.mycompany.devman.repositories.UserRepository;
+import com.mysql.cj.x.protobuf.MysqlxDatatypes;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
