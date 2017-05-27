@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="taskTable" layoutX="10.0" layoutY="57.0" prefHeight="332.0" prefWidth="586.0">
+         <columns>
+            <TableColumn prefWidth="41.0" text="ID" />
+            <TableColumn prefWidth="83.0" text="Nazwa" />
+            <TableColumn prefWidth="65.0" text="Zespół" />
+            <TableColumn prefWidth="57.0" text="Projekt" />
+            <TableColumn prefWidth="117.0" text="Data rozpoczęcia" />
+            <TableColumn prefWidth="103.0" text="Data zakończenia" />
+            <TableColumn prefWidth="78.0" text="Czas trwania" />
+            <TableColumn prefWidth="55.0" text="Status" />
+         </columns>
+      </TableView>
+      <Label layoutX="31.0" layoutY="29.0" text="Projekt:" />
+      <ChoiceBox fx:id="project2Box" layoutX="91.0" layoutY="24.0" prefWidth="150.0" />
+      <Label layoutX="284.0" layoutY="29.0" text="Zespół:" />
+      <ChoiceBox fx:id="team2Box" layoutX="342.0" layoutY="24.0" prefWidth="150.0" />
+      <Button layoutX="530.0" layoutY="24.0" mnemonicParsing="false" onAction="#onTaskFilterButtonClick" prefWidth="60.0" style="-fx-background-color: #1a376d;" text="Filtruj" textFill="WHITE" />
+   </children>
+</Pane>

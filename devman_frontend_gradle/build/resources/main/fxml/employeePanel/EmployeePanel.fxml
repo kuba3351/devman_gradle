@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+    <stylesheets>
+<!--         <URL value="@/styles/employeePanel/employeePanel.css" />-->
+    </stylesheets>
+   <children>
+      <Pane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <TabPane fx:id="tabPanel" layoutY="28.0" prefHeight="374.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Przegląd">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="15.0" layoutY="240.0" prefHeight="21.0" prefWidth="256.0" text="Ilość godzin do przepracowania dzisiaj:" />
+                              <Button layoutX="356.0" layoutY="20.0" mnemonicParsing="false" onAction="#onTaskManagementButtonClick" prefHeight="31.0" prefWidth="210.0" style="-fx-background-color: #1a376d;" text="Zarządzaj zadaniami" textFill="WHITE" />
+                              <Button layoutX="356.0" layoutY="77.0" mnemonicParsing="false" onAction="#onTeamInfoButtonClick" prefHeight="31.0" prefWidth="210.0" style="-fx-background-color: #1a376d;" text="Zobacz informacje o zaspole" textFill="WHITE" />
+                              <Button layoutX="356.0" layoutY="235.0" mnemonicParsing="false" onAction="#onWorkTimeButtonClick" prefHeight="31.0" prefWidth="210.0" style="-fx-background-color: #1a376d;" text="Zarządzaj czasem pracy" textFill="WHITE" />
+                              <Label layoutX="14.0" layoutY="297.0" prefHeight="35.0" prefWidth="265.0" text="Dni urlopu do wykorzystania&#10;w tym roku:" />
+                              <Button layoutX="356.0" layoutY="292.0" mnemonicParsing="false" onAction="#onLeaveRequestsButtonClick" prefHeight="31.0" prefWidth="210.0" style="-fx-background-color: #1a376d;" text="Zobacz wnioski o urlop" textFill="WHITE" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1a376d" height="2.0" layoutY="61.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1a376d" height="2.0" layoutY="284.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1a376d" height="2.0" layoutY="227.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1a376d" height="2.0" layoutY="118.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+                              <Label layoutX="15.0" layoutY="82.0" prefHeight="21.0" prefWidth="199.0" text="Ilość wykonanych zadań:" />
+                              <Label layoutX="15.0" layoutY="24.0" prefHeight="21.0" prefWidth="243.0" text="Ilość zadań do wykonania dla Ciebie:" />
+                              <Label fx:id="pendingHours" layoutX="294.0" layoutY="228.0" prefHeight="46.0" prefWidth="22.0" text="4" textFill="#1a376d">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="pendingDays" layoutX="276.0" layoutY="285.0" prefHeight="46.0" prefWidth="65.0" text="7" textFill="#1a376d">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="completedTasks" layoutX="270.0" layoutY="70.0" prefHeight="46.0" prefWidth="35.0" text="18" textFill="#1a376d">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="pendingTasks" layoutX="276.0" layoutY="12.0" prefHeight="46.0" prefWidth="65.0" text="5" textFill="#1a376d">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1a376d" height="2.0" layoutY="170.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+                              <Label layoutX="15.0" layoutY="140.0" prefHeight="16.0" prefWidth="278.0" text="Ilość projektów w jakich uczestniczyłeś:" />
+                              <Label fx:id="numberOfProjects" layoutX="316.0" layoutY="125.0" prefHeight="46.0" prefWidth="35.0" text="18" textFill="#1a376d">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="14.0" layoutY="193.0" text="Twój  najbliższy urlop:" />
+                              <Label fx:id="nextLeave" layoutX="179.0" layoutY="178.0" prefHeight="46.0" prefWidth="196.0" text="18" textFill="#1a376d">
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Zadania">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="tasksTable" layoutY="43.0" prefHeight="253.0" prefWidth="600.0">
+                                <columns>
+                                  <TableColumn prefWidth="90.0" text="Nazwa" />
+                                  <TableColumn prefWidth="130.0" text="Data rozpoczęcia" />
+                                  <TableColumn prefWidth="130.0" text="Data zakończenia" />
+                                  <TableColumn prefWidth="90.0" text="Czas pracy" />
+                                </columns>
+                              </TableView>
+                              <Label layoutX="9.0" layoutY="11.0" text="Projekt:" />
+                              <ChoiceBox fx:id="project2Box" layoutX="69.0" layoutY="6.0" prefWidth="150.0" />
+                              <Label layoutX="262.0" layoutY="11.0" text="Zespół:" />
+                              <ChoiceBox fx:id="team2Box" layoutX="320.0" layoutY="6.0" prefWidth="150.0" />
+                              <Button layoutX="508.0" layoutY="6.0" mnemonicParsing="false" onAction="#onTaskFilterButtonClick" prefWidth="60.0" style="-fx-background-color: #1a376d;" text="Filtruj" textFill="WHITE" />
+                              <Button layoutX="24.0" layoutY="300.0" mnemonicParsing="false" onAction="#onNewWorkTimeButtonClick" prefWidth="110.0" style="-fx-background-color: #1a376d;" text="Loguj czas" textFill="WHITE" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Czas pracy">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="workTimeTable" prefHeight="264.0" prefWidth="600.0">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="Data" />
+                                  <TableColumn prefWidth="75.0" text="Zadanie" />
+                                  <TableColumn prefWidth="75.0" text="Czas" />
+                                </columns>
+                              </TableView>
+                              <Button layoutX="14.0" layoutY="290.0" mnemonicParsing="false" onAction="#onWorkTimeEditButtonClick" prefWidth="110.0" style="-fx-background-color: #1a376d;" text="Koryguj czas" textFill="WHITE" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Zespół">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="usersTable" layoutY="42.0" prefHeight="297.0" prefWidth="600.0">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="Imię" />
+                                  <TableColumn prefWidth="75.0" text="Nazwisko" />
+                                  <TableColumn prefWidth="107.0" text="Adres e-mail" />
+                                </columns>
+                              </TableView>
+                              <Label layoutX="9.0" layoutY="11.0" text="Projekt:" />
+                              <ChoiceBox fx:id="projectBox" layoutX="69.0" layoutY="6.0" prefWidth="150.0" />
+                              <Label layoutX="262.0" layoutY="11.0" text="Zespół:" />
+                              <ChoiceBox fx:id="teamBox" layoutX="320.0" layoutY="6.0" prefWidth="150.0" />
+                              <Button layoutX="508.0" layoutY="6.0" mnemonicParsing="false" onAction="#onTeamFilterClick" prefWidth="60.0" style="-fx-background-color: #1a376d;" text="Filtruj" textFill="WHITE" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Urlopy">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="leaveTable" prefHeight="249.0" prefWidth="600.0">
+                                <columns>
+                                  <TableColumn prefWidth="75.0" text="Status" />
+                                  <TableColumn prefWidth="147.0" text="Data rozpoczęcia" />
+                                  <TableColumn prefWidth="122.0" text="Ilość dni" />
+                                </columns>
+                              </TableView>
+                              <Button layoutX="14.0" layoutY="290.0" mnemonicParsing="false" onAction="#onAddLeaveRequestButtonClick" prefWidth="120.0" style="-fx-background-color: #1a376d;" text="Nowy wniosek" textFill="WHITE" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Raporty">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="56.0" layoutY="53.0" text="Tutaj możesz zobaczyć otrzymać raport o swoim czasie pracy.">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                              <Label layoutX="239.0" layoutY="80.0" text="Rodzaj raportu:">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font></Label>
+                              <RadioButton layoutX="206.0" layoutY="123.0" mnemonicParsing="false" text="DOC" />
+                              <RadioButton layoutX="340.0" layoutY="123.0" mnemonicParsing="false" text="PDF" />
+                              <Button layoutX="260.0" layoutY="168.0" mnemonicParsing="false" prefWidth="80.0" style="-fx-background-color: #1a376d;" text="Generuj" textFill="WHITE" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1a376d" height="2.0" layoutY="237.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1a376d" height="2.0" layoutY="248.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+            <MenuBar fx:id="menuBar" prefHeight="29.0" prefWidth="600.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Plik">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Zamknij" />
+                    <MenuItem mnemonicParsing="false" text="Wyloguj" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Pomoc">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Informacje" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

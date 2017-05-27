@@ -1,0 +1,21 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+.root {
+ /* -fx-background-image:  url("../../images/stage.jpeg");
+  -fx-background-size: 400 600;
+  -fx-background-repeat: no-repeat; */
+}
+
+.Button {
+    -fx-background-color: #1a376d;
+}
+
+.Button:hover {
+    -fx-background-color: #0c2759;
+}

@@ -1,0 +1,56 @@
+// Note: "common.gradle" in the root project contains additional initialization
+//   for this project. This initialization is applied in the "build.gradle"
+//   of the root project.
+
+// NetBeans will automatically add "run" and "debug" tasks relying on the
+// "mainClass" property. You may however define the property prior executing
+// tasks by passing a "-PmainClass=<QUALIFIED_CLASS_NAME>" argument.
+//
+// Note however, that you may define your own "run" and "debug" task if you
+// prefer. In this case NetBeans will not add these tasks but you may rely on
+// your own implementation.
+if (!hasProperty('mainClass')) {
+    ext.mainClass = ''
+}
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath group: 'com.github.jengelman.gradle.plugins', name: 'shadow', version: '1.2.4'
+    }
+}
+
+
+dependencies {
+    // TODO: Add dependencies here
+    //   but note that JUnit should have already been added in parent.gradle.
+    //   By default, only the Maven Central Repository is specified in
+    //   parent.gradle.
+    //
+    // You can read more about how to add dependency here:
+    //   http://www.gradle.org/docs/current/userguide/dependency_management.html#sec:how_to_declare_your_dependencies
+    compile group: 'org.hibernate', name: 'hibernate-gradle-plugin', version: '5.2.10.Final'
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.2.10.Final'
+    compile group: 'javax.mail', name: 'mail', version: '1.4'
+    compile group: 'org.ini4j', name: 'ini4j', version: '0.5.1'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
+    compile group: 'org.hibernate', name: 'hibernate-validator', version: '5.4.1.Final'
+    compile group: 'org.glassfish.web', name: 'el-impl', version: '2.2.1-b05'
+    compile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'com.h2database', name: 'h2', version: '1.4.195'
+    compile group: 'com.lowagie', name: 'itext', version: '2.1.7'
+    
+}
+
+apply plugin: 'com.github.johnrengelman.shadow'
+
+shadowJar {
+    baseName = 'devman'
+    version = project.version
+    configurations = [project.configurations.compile]
+}
+
+build.finalizedBy(shadowJar)
